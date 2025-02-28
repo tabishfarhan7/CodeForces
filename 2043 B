@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int t = scanner.nextInt();
+
+        while (t-- > 0) {
+            int n = scanner.nextInt();
+            int d = scanner.nextInt();
+
+            System.out.print(1 + " ");
+            if (n >= 3 || d == 3 || d == 6 || d == 9) System.out.print(3 + " ");
+            if (d == 5) System.out.print(5 + " ");
+            if (n >= 3 || d == 7) System.out.print(7 + " ");
+            if (n >= 6 || (n >= 3 && (d == 3 || d == 6)) || d == 9) System.out.print(9);
+            System.out.println();
+        }
+        scanner.close();
+    }
+}
